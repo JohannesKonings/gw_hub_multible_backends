@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "gwhubmultiblebackends",
+    "namespace": "com.myorg",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Local resources (SAPUI5)",
+    "newdir": false,
+    "namespaceURI": "com/myorg",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

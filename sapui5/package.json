@@ -1,0 +1,50 @@
+{
+  "name": "gwhubmultiblebackends",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-s lint karma",
+    "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
+    "build:ui": "run-s  build:uimodule",
+    "karma-ci": "karma start karma-ci.conf.js",
+    "clearCoverage": "shx rm -rf coverage",
+    "karma": "run-s clearCoverage karma-ci",
+    "lint": "eslint .",
+    "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
+    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --a --dest deployer/resources/uimodule --include-task=generateManifestBundle ",
+    "ui5-upload": "grunt nwabap_ui5uploader --user=$deploy_user --pwd=$deploy_password"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohannesKonings/gw_hub_multible_backends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohannesKonings/gw_hub_multible_backends/issues"
+  },
+  "homepage": "https://github.com/JohannesKonings/gw_hub_multible_backends#readme",
+  "dependencies": {
+    "generator-easy-ui5": "^2.0.1"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.2.5",
+    "eslint": "^7.1.0",
+    "grunt": "^1.1.0",
+    "grunt-nwabap-ui5uploader": "^1.0.6",
+    "karma": "^5.0.9",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.2",
+    "karma-ui5": "^2.1.2",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.2",
+    "ui5-middleware-livereload": "^0.3.0"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload"
+    ]
+  }
+}
