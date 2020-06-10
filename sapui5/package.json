@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
     "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --a --dest deployer/resources/uimodule --include-task=generateManifestBundle ",
-    "ui5-upload": "grunt nwabap_ui5uploader --user=$deploy_user --pwd=$deploy_password"
+    "ui5-upload": "grunt nwabap_ui5uploader"
   },
   "repository": {
     "type": "git",

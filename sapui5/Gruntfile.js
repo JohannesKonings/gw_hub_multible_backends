@@ -24,7 +24,7 @@ module.exports = function (grunt) {
             bspcontainer_text: "UI5 multible backends",
           },
           resources: {
-            cwd: "build-folder",
+            cwd: "deployer",
             src: "**/*.*",
           },
         },

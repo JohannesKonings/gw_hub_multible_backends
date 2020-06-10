@@ -1,5 +1,6 @@
 node_modules/
 sapui5/node_modules/
+sapui5/deployer/resources/
 .idea/
 .mta/
 *.mtar
